@@ -24,12 +24,13 @@ jobs:
         distribution: 'adopt'
         server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
         settings-path: ${{ github.workspace }} # location for the settings.xml file
+        
     - on:
       push:
         branches: [main]
       pull_request:
         branches: [main]
-         paths:
+        paths:
           - '**/*.jpg'
           - '**/*.txt'
 
