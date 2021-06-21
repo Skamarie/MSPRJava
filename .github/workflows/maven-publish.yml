@@ -6,7 +6,21 @@ name: Maven Package
 on:
   release:
     types: [created]
-
+  
+  
+  
+  # *******
+  # declencheur ????      capter une diiference de fichiers , update
+  #                      1 nouveua fichier
+  #                      un fichier est modifié
+  #
+  #  branches : [master, develop ;feature /*]
+  #pull-request:
+  #  branches : [master]
+  #******  
+  
+  
+  
 jobs:
   build:
 
