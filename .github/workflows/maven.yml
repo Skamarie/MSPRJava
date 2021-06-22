@@ -11,7 +11,8 @@ on:
 
 jobs:
 
-steps {
+stage('Scan') {
+	steps {
 
 sh 'ls data/'
 
@@ -19,4 +20,5 @@ while read line
 do
 echo -e "$line\n" #instruction 
 done < listeScan.txt
+}
 }
