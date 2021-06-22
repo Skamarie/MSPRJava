@@ -12,7 +12,7 @@ on:
 jobs:
 
 stage('Scan') {
-	steps {
+steps {
 
 sh 'ls data/'
 
