@@ -12,13 +12,15 @@ on:
 jobs:
 
 stage('Scan') {
-steps {
-
-sh 'ls data/'
-
-while read line
-do
-echo -e "$line\n" #instruction 
-done < listeScan.txt
+	steps {
+		sh'''
+	 		cd mspr-java-data
+	 		ls data/ > listeScan.txt
+		'''
+		while read line
+		do
+			echo -e "$line\n" #instruction 
+		done < listeScan.txt
+	      }
 }
 }
