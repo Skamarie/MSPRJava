@@ -12,7 +12,7 @@ on:
 jobs:
 
 steps {
-# sh 'cd mspr-java-data'
+
 sh 'ls data/ > listeScan.txt'
 
 while read line
