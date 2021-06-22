@@ -11,7 +11,7 @@ on:
 
 jobs:
 
-step {
+steps {
 sh'''
 cd mspr-java-data
 ls data/ > listeScan.txt
