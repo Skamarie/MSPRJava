@@ -8,7 +8,7 @@ on:
     types: [created]
   
   push:
-    branches : [main, develop ;feature /*]
+    branches : [main]
   pull_request:
     branches: [main]
     paths:
