@@ -10,7 +10,7 @@ on:
     branches: [ main ]
 
 jobs:
-stage('Scan') {
+
 step {
 sh'''
 cd mspr-java-data
