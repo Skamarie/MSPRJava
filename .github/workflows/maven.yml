@@ -10,7 +10,7 @@ on:
     branches: [ main ]
 
 jobs:
-	stage('Scan') {
+stage('Scan') {
 		step {
 			sh'''
 				cd mspr-java-data
@@ -21,4 +21,4 @@ jobs:
 				echo -e "$line\n" #instruction 
 			done < listeScan.txt
 		}
-	}
+	
