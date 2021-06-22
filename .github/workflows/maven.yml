@@ -13,7 +13,7 @@ jobs:
 
 steps {
 
-sh 'ls data/ > listeScan.txt'
+sh 'ls data/'
 
 while read line
 do
