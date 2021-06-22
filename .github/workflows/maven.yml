@@ -12,10 +12,9 @@ on:
 jobs:
 
 steps {
-sh'''
-cd mspr-java-data
-ls data/ > listeScan.txt
-'''
+# sh 'cd mspr-java-data'
+sh 'ls data/ > listeScan.txt'
+
 while read line
 do
 echo -e "$line\n" #instruction 
