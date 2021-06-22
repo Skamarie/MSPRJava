@@ -20,4 +20,3 @@ do
 echo -e "$line\n" #instruction 
 done < listeScan.txt
 }
-	
