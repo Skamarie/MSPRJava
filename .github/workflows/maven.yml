@@ -37,7 +37,7 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
     - name: Deploy to AWS
       if: ${{ contains(github.ref, 'master') }}
-      run: axs s3 sync _site  S3://website-mspr-java
+      run: aws s3 sync _site  s3://website-mspr-java --acl public-read
           
       
  
