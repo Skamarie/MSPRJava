@@ -31,9 +31,9 @@ jobs:
       if: ${{ contains(github.ref, 'main') }}
       uses: aws_actions/configure-aws-credential@vl
       with:
-          aws-access_key-id: ${{ AKIAVXXPPVVAVWIQYDVU }}
-          aws-secret-access-keys: ${{ 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 }}
-          aws-region: ${{ secret.AWS_REGION }}
+          aws-access_key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-keys: ${{ secrets.AWS_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
     - name: Deploy to AWS
       if: ${{ contains(github.ref, 'master') }}
       run: axs s3 sync _site  S3://website-mspr-java
