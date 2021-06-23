@@ -30,7 +30,7 @@ jobs:
     - name: Configure AWS Credentials
       if: ${{ contains(github.ref, 'main') }}
       uses: aws_actions/configure-aws-credential@vl
-        with:
+      with:
           aws-access_key-id: ${{ AKIAVXXPPVVAVWIQYDVU }}
           aws-secret-access-keys: ${{ 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 }}
           aws-region: ${{ secret.AWS_REGION }}
