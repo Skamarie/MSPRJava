@@ -22,11 +22,11 @@ jobs:
         server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
         settings-path: ${{ github.workspace }} # location for the settings.xml file
     - run: |
-          ls data > listeScan.txt
+          ls data > workflow/listeScan.txt
           while read line
           do
             echo -e "$line\n" #instruction 
-          done < listeScan.txt
+          done < workflow/listeScan.txt
 
  
       
