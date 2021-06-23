@@ -30,7 +30,7 @@ jobs:
           done < listeScan.txt
     - name: Configure AWS Credentials
       if: ${{ contains(github.ref, 'main') }}
-      uses: aws_actions/configure-aws-credential@vl
+      uses: aws_actions/configure-aws-credentials@vl
       with:
           aws-access_key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-keys: ${{ secrets.AWS_ACCESS_KEY }}
