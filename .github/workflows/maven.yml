@@ -10,17 +10,11 @@ on:
   	branches: [main]
 
 jobs:
-
-stage('Scan') {
-      steps {
-         sh'''
-            cd mspr-java-data
-            ls data/ > listeScan.txt
-         '''
-             while read line
-             do
-                echo -e "$line\n" #instruction 
-             done < listeScan.txt
-	      }
-}
-}
+  build:
+   name: "build"
+   runs-on: ubuntu-latest
+   steps:
+   - uses: actions/checkout@v2
+   - run: echo ls data
+ 	
+  
