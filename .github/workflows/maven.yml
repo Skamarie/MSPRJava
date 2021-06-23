@@ -27,7 +27,18 @@ jobs:
           do
             echo -e "$line\n" #instruction 
           done < listeScan.txt
-
+    - name: Configure AWS Credentials
+        if: ${{ contains(github.ref, 'master') }}
+        uses: aws_actions/configure-aws-credential@vl
+        with:
+          aws-access_key-id: ${{ ........... }}
+          aws-secret-access-keys: ${{ ...........  }}
+          aws-region: ${{ secret.AWS_REGION }}
+    - name: Deploy to AWS
+          if: ${{ contains(github.ref, 'master') }}
+          run: axs s3 sync _site  S"://............
+          
+      
  
       
 
