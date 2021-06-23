@@ -28,15 +28,15 @@ jobs:
             echo -e "$line\n" #instruction 
           done < listeScan.txt
     - name: Configure AWS Credentials
-        if: ${{ contains(github.ref, 'master') }}
-        uses: aws_actions/configure-aws-credential@vl
+      if: ${{ contains(github.ref, 'main') }}
+      uses: aws_actions/configure-aws-credential@vl
         with:
           aws-access_key-id: ${{ AKIAVXXPPVVAVWIQYDVU }}
           aws-secret-access-keys: ${{ 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 }}
           aws-region: ${{ secret.AWS_REGION }}
     - name: Deploy to AWS
-          if: ${{ contains(github.ref, 'master') }}
-          run: axs s3 sync _site  S3://website-mspr-java
+      if: ${{ contains(github.ref, 'master') }}
+      run: axs s3 sync _site  S3://website-mspr-java
           
       
  
