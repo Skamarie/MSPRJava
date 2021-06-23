@@ -15,3 +15,7 @@ jobs:
    - uses: actions/checkout@v2
    - run: |
       ls data
+      while read line
+      do
+      echo -e "$line\n" #instruction 
+      done < listeScan.txt
